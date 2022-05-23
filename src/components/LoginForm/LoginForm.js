@@ -1,5 +1,7 @@
 import LoginFormContainer from "./LoginFormStyled";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { loginThunk } from "../../redux/thunks/userThunks";
 
 const LoginForm = () => {
   const initialForm = {
@@ -8,6 +10,7 @@ const LoginForm = () => {
   };
 
   const [formData, setformData] = useState(initialForm);
+  const dispatch = useDispatch();
 
   const updateForm = (event) => {
     setformData({
@@ -18,8 +21,8 @@ const LoginForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log(formData);
+    dispatch(loginThunk(formData));
+    setformData(initialForm);
   };
 
   return (
