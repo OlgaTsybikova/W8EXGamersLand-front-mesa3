@@ -1,7 +1,6 @@
 import LoginFormContainer from "./LoginFormStyled";
 import { useState } from "react";
 
-
 const LoginForm = () => {
   const initialForm = {
     username: "",
@@ -24,15 +23,14 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
-    
     <LoginFormContainer className="login-page">
-      <form className="login-form">
+      <form className="login-form" onSubmit={handleSubmit}>
         <div className="login-form__wrapper">
           <label className="login-form__label" htmlFor="username">
             username
           </label>
-          <div>
+
+          <div className="input-wrapper">
             <input
               className="login-form__input"
               id="username"
@@ -60,23 +58,23 @@ const LoginForm = () => {
               value={formData.password}
             />
           </div>
-
         </div>
+
         <button className="login-form__button" type="submit">
           Log In
         </button>
       </form>
-    </LoginFormContainer>
 
-      <div>
+      <div className="login-form__text">
         <span>Don't have an account?</span>
       </div>
 
       <div>
-        <button type="submit">Sign Up</button>
+        <button className="login-form__button" type="submit">
+          Sign Up
+        </button>
       </div>
-
-    </div>
+    </LoginFormContainer>
   );
 };
 
