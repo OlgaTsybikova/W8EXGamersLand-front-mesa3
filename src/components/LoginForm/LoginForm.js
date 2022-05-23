@@ -4,17 +4,17 @@ import { useDispatch } from "react-redux";
 import { loginThunk } from "../../redux/thunks/userThunks";
 
 const LoginForm = () => {
-  const dispatch = useDispatch();
 
   const initialForm = {
     username: "",
     password: "",
   };
 
-  const [formData, setformData] = useState(initialForm);
+  const [formData, setFormData] = useState(initialForm);
+  const dispatch = useDispatch();
 
   const updateForm = (event) => {
-    setformData({
+    setFormData({
       ...formData,
       [event.target.id]: event.target.value,
     });
@@ -24,6 +24,7 @@ const LoginForm = () => {
     event.preventDefault();
 
     dispatch(loginThunk(formData));
+    setFormData(initialForm);
   };
 
   return (
