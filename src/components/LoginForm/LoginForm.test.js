@@ -1,26 +1,29 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+
+import { Provider } from "react-redux";
+import store from "../../redux/store/store";
 import LoginForm from "./LoginForm";
 
 describe("Given a LoginForm component", () => {
-  describe("When the two inputs username and password fields have text and the submit button is clicked", () => {
-    test("Then it should allow the user to submit their crendentials", () => {
-      const submit = jest.fn();
+  describe("When it's rendered", () => {
+    test("Then it should render one textbox input, one password input and two buttons", () => {
+      const expectedTextInputs = 1;
+      const expectedPasswordInputs = 1;
+      const expectedButtons = 2;
 
-      render(<LoginForm />);
+      render(
+        <Provider store={store}>
+          <LoginForm />
+        </Provider>
+      );
 
-      const usernameField = screen.getByLabelText(/username/);
-      const passwordField = screen.getByLabelText(/password/);
-      const submitButton = screen.getByText("Log In");
+      const textInputs = screen.getAllByRole("textbox", { type: "text" });
+      const passwordInputs = screen.getAllByLabelText("password");
+      const buttons = screen.getAllByRole("button");
 
-      userEvent.type(usernameField, "usertest");
-      userEvent.type(passwordField, "password");
-      userEvent.click(submitButton);
-
-      expect(submit).toBeCalledWith({
-        username: "usertest",
-        password: "password",
-      });
+      expect(textInputs).toHaveLength(expectedTextInputs);
+      expect(passwordInputs).toHaveLength(expectedPasswordInputs);
+      expect(buttons).toHaveLength(expectedButtons);
     });
   });
 });
