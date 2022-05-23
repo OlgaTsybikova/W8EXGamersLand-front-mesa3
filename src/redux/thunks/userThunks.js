@@ -32,6 +32,3 @@ export const registerThunk = (userData) => async (dispatch) => {
 
   dispatch(registerActionCreator(data));
 };
-
-
-

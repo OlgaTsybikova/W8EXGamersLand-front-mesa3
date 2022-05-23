@@ -1,25 +1,23 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import registerThunk from "../../redux/thunks/userThunks";
+import { registerThunk } from "../../redux/thunks/userThunks";
 import RegisterFormStyled from "./RegisterFormStyled";
 
 const RegisterForm = () => {
-  const emptyFields = {
+  const [formData, setFormData] = useState({
     name: "",
     username: "",
     password: "",
-  };
+  });
 
   const dispatch = useDispatch();
-
-  const [formData, setFormData] = useState(emptyFields);
 
   const updateData = (event) => {
     setFormData({ ...formData, [event.target.id]: event.target.value });
   };
 
   const register = (event) => {
-    event.preventdefault();
+    event.preventDefault();
     dispatch(registerThunk(formData));
   };
 
@@ -33,6 +31,7 @@ const RegisterForm = () => {
             id="name"
             value={formData.name}
             onChange={updateData}
+            placeholder="Name"
           />
         </label>
         <label htmlFor="username">
@@ -42,6 +41,7 @@ const RegisterForm = () => {
             id="username"
             value={formData.username}
             onChange={updateData}
+            placeholder="Username"
           />
         </label>
         <label htmlFor="password">
@@ -51,6 +51,7 @@ const RegisterForm = () => {
             id="password"
             value={formData.password}
             onChange={updateData}
+            placeholder="Password"
           />
         </label>
         <button type="submit" onClick={register}>
