@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import registerThunk from "../../redux/thunks/userThunks";
 import RegisterFormStyled from "./RegisterFormStyled";
 
 const RegisterForm = () => {
@@ -8,6 +10,8 @@ const RegisterForm = () => {
     password: "",
   };
 
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState(emptyFields);
 
   const updateData = (event) => {
@@ -16,6 +20,7 @@ const RegisterForm = () => {
 
   const register = (event) => {
     event.preventdefault();
+    dispatch(registerThunk(formData));
   };
 
   return (
