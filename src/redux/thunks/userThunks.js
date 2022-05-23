@@ -5,6 +5,7 @@ import {
 } from "../features/userSlice";
 import jwtDecode from "jwt-decode";
 
+
 export const loginThunk = (userData) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}/users/login`;
 
@@ -25,7 +26,12 @@ export const loginThunk = (userData) => async (dispatch) => {
 
 export const registerThunk = (userData) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}/users/register`;
+
   const { data } = await axios.post(url, userData);
+  console.log(data);
 
   dispatch(registerActionCreator(data));
 };
+
+
+
