@@ -2,9 +2,9 @@ import LoginFormContainer from "./LoginFormStyled";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "../../redux/thunks/userThunks";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
-
   const initialForm = {
     username: "",
     password: "",
@@ -12,6 +12,7 @@ const LoginForm = () => {
 
   const [formData, setFormData] = useState(initialForm);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const updateForm = (event) => {
     setFormData({
@@ -25,6 +26,10 @@ const LoginForm = () => {
 
     dispatch(loginThunk(formData));
     setFormData(initialForm);
+  };
+
+  const goToRegister = () => {
+    navigate("/users/register");
   };
 
   return (
@@ -75,7 +80,7 @@ const LoginForm = () => {
       </div>
 
       <div>
-        <button className="login-form__button" type="submit">
+        <button className="login-form__button" onClick={goToRegister}>
           Sign Up
         </button>
       </div>

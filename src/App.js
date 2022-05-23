@@ -1,10 +1,15 @@
+import { Navigate, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 function App() {
   return (
     <>
-      <h1>GamersLand in process...</h1>
-      <LoginPage />
+      <Routes>
+        <Route path="/" element={<Navigate to="/users/login" />} />
+        <Route path="/users/login" element={<LoginPage />} />
+        <Route path="/users/register" element={<RegisterPage />} />
+      </Routes>
     </>
   );
 }
