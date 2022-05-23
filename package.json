@@ -46,5 +46,13 @@
   },
   "devDependencies": {
     "husky": "^7.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*/.js",
+      "!src/index.js",
+      "!index.js",
+      "!src/initiliazeServer.js"
+    ]
   }
 }
