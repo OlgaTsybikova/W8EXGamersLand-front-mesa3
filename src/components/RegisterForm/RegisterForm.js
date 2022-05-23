@@ -22,28 +22,28 @@ const RegisterForm = () => {
     <RegisterFormStyled>
       <form autoComplete="off" noValidate>
         <label htmlFor="name">
+          Name
           <input
             type="text"
             id="name"
-            placeholder="name"
             value={formData.name}
             onChange={updateData}
           />
         </label>
         <label htmlFor="username">
+          Username
           <input
             type="text"
             id="username"
-            placeholder="username"
             value={formData.username}
             onChange={updateData}
           />
         </label>
         <label htmlFor="password">
+          Password
           <input
             type="password"
             id="password"
-            placeholder="password"
             value={formData.password}
             onChange={updateData}
           />
