@@ -1,7 +1,11 @@
 import LoginFormContainer from "./LoginFormStyled";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginThunk } from "../../redux/thunks/userThunks";
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+
   const initialForm = {
     username: "",
     password: "",
@@ -19,7 +23,7 @@ const LoginForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(formData);
+    dispatch(loginThunk(formData));
   };
 
   return (
