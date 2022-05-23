@@ -5,8 +5,10 @@ const userSlice = createSlice({
   initialState: {},
   reducers: {
     logIn: (user, action) => ({ ...action.payload }),
+    register: (user, action) => ({ ...action.payload }),
   },
 });
-export const { logIn: loginActionCreator } = userSlice.actions;
+export const { logIn: loginActionCreator, register: registerActionCreator } =
+  userSlice.actions;
 
 export default userSlice.reducer;

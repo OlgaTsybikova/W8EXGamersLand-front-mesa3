@@ -1,4 +1,6 @@
 import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
+import store from "../../redux/store/store";
 import RegisterForm from "./RegisterForm";
 
 describe("Given the RegisterForm component", () => {
@@ -8,7 +10,11 @@ describe("Given the RegisterForm component", () => {
       const expectedPasswordInputs = 1;
       const expectedButtons = 1;
 
-      render(<RegisterForm />);
+      render(
+        <Provider store={store}>
+          <RegisterForm />
+        </Provider>
+      );
 
       const textInputs = screen.getAllByRole("textbox", { type: "text" });
       const passwordInputs = screen.getAllByLabelText("Password");
