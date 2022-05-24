@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import CardGame from "../CardGame/CardGame";
 
-const CardGameList = (games) => {
+const CardGameList = () => {
+  const games = useSelector((state) => state.games);
+
   return (
     <div className="game-container">
       <ul>

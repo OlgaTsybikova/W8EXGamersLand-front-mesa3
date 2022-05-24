@@ -8,8 +8,16 @@ import GamesPage from "./pages/GamesPage/GamesPage";
 
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { loadGamesThunk } from "./redux/thunks/gamesThunks";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadGamesThunk(localStorage.token));
+  }, [dispatch]);
+
   return (
     <>
       <AppStyled>

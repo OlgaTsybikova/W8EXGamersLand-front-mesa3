@@ -7,9 +7,9 @@ import {
 export const loadGamesThunk = (token) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}games`;
   try {
-    const {
-      data: { games },
-    } = await axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
+    const { data: games } = await axios.get(url, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
 
     if (games) {
       dispatch(loadGamesActionCreator(games));
@@ -22,9 +22,9 @@ export const loadGamesThunk = (token) => async (dispatch) => {
 export const loadGameThunk = (id, token) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}/games/:${id}`;
   try {
-    const {
-      data: { game },
-    } = await axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
+    const { data: game } = await axios.get(url, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
 
     if (game) {
       dispatch(loadGameActionCreator(game));
