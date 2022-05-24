@@ -5,9 +5,8 @@ import {
 } from "../features/userSlice";
 import jwtDecode from "jwt-decode";
 
-
 export const loginThunk = (userData) => async (dispatch) => {
-  const url = `${process.env.REACT_APP_API_URL}/users/login`;
+  const url = `${process.env.REACT_APP_API_URL}users/login`;
 
   try {
     const {
@@ -25,7 +24,7 @@ export const loginThunk = (userData) => async (dispatch) => {
 };
 
 export const registerThunk = (userData) => async (dispatch) => {
-  const url = `${process.env.REACT_APP_API_URL}/users/register`;
+  const url = `${process.env.REACT_APP_API_URL}users/register`;
 
   const { data } = await axios.post(url, userData);
   console.log(data);
