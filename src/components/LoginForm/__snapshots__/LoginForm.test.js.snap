@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given a LoginForm component function When invoked Then it should render correctly a form with 2 inputs and 2 buttons 1`] = `
+exports[`Given a LoginForm component function When invoked Then it should render correctly a form with 2 inputs and 1 buttons 1`] = `
 <div
-  className="sc-bczRLJ jhGOmx login-page"
+  className="sc-bczRLJ ewRgZw login-page"
 >
   <form
     className="login-form"
@@ -74,6 +74,79 @@ exports[`Given a LoginForm component function When invoked Then it should render
     >
       Register
     </a>
+  </div>
+</div>
+`;
+
+exports[`Given a LoginForm component function When invoked Then it should render correctly a form with 2 inputs and 2 buttons 1`] = `
+<div
+  className="sc-bczRLJ jhGOmx login-page"
+>
+  <form
+    className="login-form"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div
+      className="login-form__wrapper"
+    >
+      <label
+        className="login-form__label"
+        htmlFor="username"
+      >
+        username
+      </label>
+      <div
+        className="input-wrapper"
+      >
+        <input
+          autoComplete="off"
+          className="login-form__input"
+          id="username"
+          onChange={[Function]}
+          required={true}
+          type="username"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="login-form__wrapper"
+    >
+      <label
+        className="login-form__label"
+        htmlFor="password"
+      >
+        password
+      </label>
+      <div>
+        <input
+          autoComplete="off"
+          className="login-form__input"
+          id="password"
+          onChange={[Function]}
+          required={true}
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <button
+      className="login-form__button"
+      type="submit"
+    >
+      Log In
+    </button>
+  </form>
+  <div
+    className="login-form__text"
+  >
+    <span>
+      Don't have an account?
+    </span>
+  </div>
+  <div>
+     <Link to={"/register"}>Register</Link>
   </div>
 </div>
 `;
