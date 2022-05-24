@@ -1,13 +1,16 @@
 import StyledCard from "./CardGameStyled";
 
-const CardGame = ({ game }) => {
+const CardGame = () => {
   return (
     <>
       <StyledCard>
-        <h2>name: {game.name} </h2>
-        <img src={game.image[0]} alt="" />
-        <h2>Tipo:{game.type} </h2>
-        <h2>Plataforma: {game.platform}</h2>
+        <h2>Name: Hallo </h2>
+        <img
+          src="https://es.web.img3.acsta.net/pictures/22/02/21/20/10/2589351.jpg"
+          alt=""
+        />
+        <h2>Tipo: Campaña </h2>
+        <h2>Plataforma: Xbox</h2>
       </StyledCard>
     </>
   );

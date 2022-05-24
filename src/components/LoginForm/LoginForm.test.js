@@ -1,9 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import reactTestRenderer from "react-test-renderer";
-
 import { Provider } from "react-redux";
-import { BrowserRouter, Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import store from "../../redux/store/store";
 import { loginThunk } from "../../redux/thunks/userThunks";
 import LoginForm from "./LoginForm";

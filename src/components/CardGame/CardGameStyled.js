@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const StyledCard = styled.div`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   border: 2px solid black;
   border-radius: 15px;
   display: flex;
