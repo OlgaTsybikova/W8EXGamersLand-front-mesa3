@@ -75,9 +75,6 @@ const LoginForm = () => {
       </div>
 
       <div>
-        {/* <button className="login-form__button" type="submit">
-          Sign Up
-        </button> */}
         <Link to={"/register"}>Register</Link>
       </div>
     </LoginFormStyled>
