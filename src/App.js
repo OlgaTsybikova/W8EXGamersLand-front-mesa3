@@ -3,6 +3,7 @@ import AppStyled from "./AppStyled";
 import AntiGoalKeeper from "./components/GoalKeeper/AntiGoalKeeper";
 import GoalKeeper from "./components/GoalKeeper/GoalKeeper";
 import DetailPage from "./pages/DetailPage/DetailPage";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import GamesPage from "./pages/GamesPage/GamesPage";
 
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -48,6 +49,7 @@ function App() {
             </GoalKeeper>
           }
         />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </>
   );
