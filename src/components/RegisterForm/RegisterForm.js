@@ -63,7 +63,9 @@ const RegisterForm = () => {
           Register
         </button>
         <p>Do you have an account?</p>
-        <Link to={"/loginpage"}>Click here to log in</Link>
+        <Link className="" to={"/loginpage"}>
+          Click here to log in
+        </Link>
       </form>
     </RegisterFormStyled>
   );

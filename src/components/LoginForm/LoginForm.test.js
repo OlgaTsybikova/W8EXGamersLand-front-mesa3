@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import reactTestRenderer from "react-test-renderer";
 
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Router } from "react-router-dom";
 import store from "../../redux/store/store";
 import { loginThunk } from "../../redux/thunks/userThunks";
 import LoginForm from "./LoginForm";
@@ -72,7 +72,7 @@ describe("Given a LoginForm component", () => {
 
 describe("Given a LoginForm component function", () => {
   describe("When invoked", () => {
-    test("Then it should render correctly a form with 2 inputs and 2 buttons", () => {
+    test("Then it should render correctly a form with 2 inputs and 1 buttons", () => {
       const loginForm = reactTestRenderer
         .create(
           <BrowserRouter>

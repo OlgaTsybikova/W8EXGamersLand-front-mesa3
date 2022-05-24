@@ -48,6 +48,14 @@ const LoginFormStyled = styled.div`
       padding-right: 0.5rem;
     }
   }
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    color: blue;
+    font-size: 15px;
+  }
 `;
 
 export default LoginFormStyled;
