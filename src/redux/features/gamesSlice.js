@@ -7,6 +7,6 @@ const gamesSlice = createSlice({
     loadGames: (games, action) => [...action.payload],
   },
 });
-export const { loadGamesActionCreator } = gamesSlice.actions;
+export const { loadGames: loadGamesActionCreator } = gamesSlice.actions;
 
 export default gamesSlice.reducer;
