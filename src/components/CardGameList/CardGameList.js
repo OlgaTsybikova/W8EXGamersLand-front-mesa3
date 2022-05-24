@@ -10,7 +10,7 @@ const CardGameList = () => {
       <CardGameListStyled>
         {games.map((game) => {
           return (
-            <li key={games.id}>
+            <li key={game.id}>
               <CardGame game={game} />
             </li>
           );
