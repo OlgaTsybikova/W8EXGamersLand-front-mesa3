@@ -13,7 +13,14 @@ function App() {
         <h1>GamersLand</h1>
       </AppStyled>
       <Routes>
-        <Route path="/" element={<Navigate to="/games" />} />
+        <Route
+          path="/"
+          element={
+            <GoalKeeper>
+              <Navigate to="/games" />
+            </GoalKeeper>
+          }
+        />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route
