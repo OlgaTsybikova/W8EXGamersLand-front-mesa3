@@ -15,15 +15,13 @@ const GamesPage = () => {
   };
 
   return (
-    <>
+    <GamesPageStyled>
       <h1>This are all your games</h1>
       <CardGameList />
-      <GamesPageStyled>
-        <button className="button-logOut" onClick={logout}>
-          LogOut
-        </button>
-      </GamesPageStyled>
-    </>
+      <button className="button-logOut" onClick={logout}>
+        LogOut
+      </button>
+    </GamesPageStyled>
   );
 };
 
