@@ -20,6 +20,11 @@ const RegisterForm = () => {
   const register = (event) => {
     event.preventDefault();
     dispatch(registerThunk(formData));
+    setFormData({
+      name: "",
+      username: "",
+      password: "",
+    });
   };
 
   return (
