@@ -41,7 +41,7 @@ const LoginForm = () => {
       <form className="login-form" onSubmit={handleSubmit} noValidate>
         <div className="login-form__wrapper">
           <label className="login-form__label" htmlFor="username">
-            username
+            Username
           </label>
 
           <div className="input-wrapper">
@@ -59,7 +59,7 @@ const LoginForm = () => {
 
         <div className="login-form__wrapper">
           <label className="login-form__label" htmlFor="password">
-            password
+            Password
           </label>
           <div>
             <input

@@ -2,21 +2,22 @@ import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import store from "../../redux/store/store";
-import GamesPage from "./GamesPage";
+import DetailPage from "./DetailPage";
 
-describe("Given an Games Page Component", () => {
+describe("Given an DetailPage Component", () => {
   describe("When it is instantiated", () => {
-    test("Then it should render an h1 with the text 'This are all your games'", () => {
+    test("Then it should render an h2 and a image", () => {
       render(
         <BrowserRouter>
           <Provider store={{ ...store }}>
-            <GamesPage />
+            <DetailPage />
           </Provider>
         </BrowserRouter>
       );
-      const h1 = screen.getByRole("heading", { level: 1 });
-      const texth1 = screen.getByText("This are all your games");
-      expect(h1).toBe(texth1);
+      const h2 = screen.getByRole("heading", { level: 2 });
+      const image = screen.getByRole("img");
+      expect(h2).toBeInTheDocument();
+      expect(image).toBeInTheDocument();
     });
   });
 });

@@ -13,4 +13,5 @@ const RegisterPage = () => {
     </RegisterPageContainer>
   );
 };
+
 export default RegisterPage;
