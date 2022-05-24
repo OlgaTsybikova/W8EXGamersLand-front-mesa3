@@ -5,8 +5,12 @@ const gamesSlice = createSlice({
   initialState: [],
   reducers: {
     loadGames: (games, action) => [...action.payload],
+    loadGame: (games, action) => [...action.payload],
   },
 });
-export const { loadGames: loadGamesActionCreator } = gamesSlice.actions;
+export const {
+  loadGames: loadGamesActionCreator,
+  loadGame: loadGameActionCreator,
+} = gamesSlice.actions;
 
 export default gamesSlice.reducer;
