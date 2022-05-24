@@ -15,7 +15,7 @@ describe("Given a Login Page component", () => {
         </BrowserRouter>
       );
 
-      const registerForm = screen.getByText("password");
+      const registerForm = screen.getByText("Password");
       expect(registerForm).toBeInTheDocument();
     });
   });
