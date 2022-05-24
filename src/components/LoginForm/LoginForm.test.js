@@ -19,7 +19,7 @@ jest.mock("../../redux/thunks/userThunks", () => ({
 
 describe("Given a LoginForm component", () => {
   describe("When it's rendered", () => {
-    test("Then it should render one textbox input, one password input and two buttons", () => {
+    test("Then it should render one textbox input, one password input and one button", () => {
       const expectedTextInputs = 1;
       const expectedPasswordInputs = 1;
       const expectedButtons = 1;
