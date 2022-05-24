@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { registerThunk } from "../../redux/thunks/userThunks";
 import RegisterFormStyled from "./RegisterFormStyled";
 
@@ -57,6 +58,8 @@ const RegisterForm = () => {
         <button type="submit" onClick={register}>
           Register
         </button>
+        <p>Do you have an account?</p>
+        <Link to={"/loginpage"}>Click here to log in</Link>
       </form>
     </RegisterFormStyled>
   );

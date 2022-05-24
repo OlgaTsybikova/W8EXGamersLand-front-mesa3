@@ -2,6 +2,7 @@ import LoginFormStyled from "./LoginFormStyled";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "../../redux/thunks/userThunks";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const initialForm = {
@@ -74,9 +75,10 @@ const LoginForm = () => {
       </div>
 
       <div>
-        <button className="login-form__button" type="submit">
+        {/* <button className="login-form__button" type="submit">
           Sign Up
-        </button>
+        </button> */}
+        <Link to={"/register"}>Register</Link>
       </div>
     </LoginFormStyled>
   );
