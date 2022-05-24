@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logoutActionCreator } from "../../redux/features/userSlice";
-import CardGame from "../../components/CardGame/CardGame";
 import { GamesPageStyled } from "./GamesPageEstyled";
+import CardGameList from "../../components/CardGameList/CardGameList";
 
 const GamesPage = () => {
   const dispatch = useDispatch();

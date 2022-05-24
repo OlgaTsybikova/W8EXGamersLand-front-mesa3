@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import CardGame from "../CardGame/CardGame";
+import CardGameListStyled from "./CardGameListStyles";
 
-const CardGameList = (games) => {
+const CardGameList = () => {
+  const games = useSelector((state) => state.games);
+
   return (
     <div className="game-container">
-      <ul>
+      <CardGameListStyled>
         {games.map((game) => {
           return (
             <li key={games.id}>
@@ -11,7 +15,7 @@ const CardGameList = (games) => {
             </li>
           );
         })}
-      </ul>
+      </CardGameListStyled>
     </div>
   );
 };
