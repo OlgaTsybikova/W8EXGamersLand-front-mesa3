@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import CardGame from "../CardGame/CardGame";
-import CardGameListStyled from "./CardGameListStyles";
+import CardGameListStyled from "./CardGameListStyled";
 
 const CardGameList = () => {
   const games = useSelector((state) => state.games);
