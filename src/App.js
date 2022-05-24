@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import AppStyled from "./AppStyled";
 import AntiGoalKeeper from "./components/GoalKeeper/AntiGoalKeeper";
 import GoalKeeper from "./components/GoalKeeper/GoalKeeper";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import GamesPage from "./pages/GamesPage/GamesPage";
 
@@ -48,6 +49,7 @@ function App() {
             </GoalKeeper>
           }
         />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </>
   );
