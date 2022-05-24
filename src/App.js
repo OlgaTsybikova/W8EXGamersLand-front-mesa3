@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppStyled from "./AppStyled";
 import GoalKeeper from "./components/GoalKeeper/GoalKeeper";
+import DetailPage from "./pages/DetailPage/DetailPage";
 import GamesPage from "./pages/GamesPage/GamesPage";
 
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -23,6 +24,7 @@ function App() {
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/games/:id" element={<DetailPage />} />
         <Route
           path="/games"
           element={
