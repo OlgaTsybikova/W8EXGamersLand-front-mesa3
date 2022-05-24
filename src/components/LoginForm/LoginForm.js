@@ -2,7 +2,7 @@ import LoginFormStyled from "./LoginFormStyled";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginThunk } from "../../redux/thunks/userThunks";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const initialForm = {

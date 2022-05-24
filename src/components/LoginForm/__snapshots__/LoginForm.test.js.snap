@@ -6,6 +6,7 @@ exports[`Given a LoginForm component function When invoked Then it should render
 >
   <form
     className="login-form"
+    noValidate={true}
     onSubmit={[Function]}
   >
     <div
