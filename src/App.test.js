@@ -5,8 +5,8 @@ import App from "./App";
 import store from "./redux/store/store";
 
 describe("Given an App conponent", () => {
-  describe("When invoked with the heading text 'GamersLand in process...'", () => {
-    test("Then it should render a h1 element with the text 'GamersLand in process...'", () => {
+  describe("When invoked with the heading text 'GamersLand'", () => {
+    test("Then it should render a h1 element with the text 'GamersLand'", () => {
       render(
         <BrowserRouter>
           <Provider store={store}>
@@ -15,7 +15,7 @@ describe("Given an App conponent", () => {
         </BrowserRouter>
       );
 
-      const text = "GamersLand in process...";
+      const text = "GamersLand";
       const expectedtext = screen.getByText(text);
       expect(expectedtext).toBeInTheDocument();
     });

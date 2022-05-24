@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given a LoginForm component function When invoked Then it should render correctly a form with 2 inputs and 2 buttons 1`] = `
+exports[`Given a LoginForm component function When invoked Then it should render correctly a form with 2 inputs and 1 buttons 1`] = `
 <div
-  className="sc-bczRLJ jhGOmx login-page"
+  className="sc-bczRLJ ewRgZw login-page"
 >
   <form
     className="login-form"
