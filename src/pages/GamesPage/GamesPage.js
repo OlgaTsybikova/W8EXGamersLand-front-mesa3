@@ -16,11 +16,11 @@ const GamesPage = () => {
 
   return (
     <>
-      <h1>This are all your games</h1>
+      <h1>These are all your games</h1>
       <CardGame />
       <GamesPageStyled>
         <button className="button-logOut" onClick={logout}>
-          LogOut
+          Log Out
         </button>
       </GamesPageStyled>
     </>
