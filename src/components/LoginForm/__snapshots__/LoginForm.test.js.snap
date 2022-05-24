@@ -146,7 +146,7 @@ exports[`Given a LoginForm component function When invoked Then it should render
     </span>
   </div>
   <div>
-     <Link to={"/register"}>Register</Link>
+    <Link to={"/register"}>Register</Link>
   </div>
 </div>
 `;
