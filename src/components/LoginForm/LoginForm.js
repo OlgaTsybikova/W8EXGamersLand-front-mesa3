@@ -29,7 +29,7 @@ const LoginForm = () => {
 
   return (
     <LoginFormStyled className="login-page">
-      <form className="login-form" onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit} noValidate>
         <div className="login-form__wrapper">
           <label className="login-form__label" htmlFor="username">
             username
