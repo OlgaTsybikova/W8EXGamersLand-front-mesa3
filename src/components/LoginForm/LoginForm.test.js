@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import reactTestRenderer from "react-test-renderer";
 
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
@@ -65,6 +66,24 @@ describe("Given a LoginForm component", () => {
 
       expect(loginThunk).toHaveBeenCalledWith(expectedFormData);
       expect(mockDispatch).toHaveBeenCalledWith(loginThunk());
+    });
+  });
+});
+
+describe("Given a LoginForm component function", () => {
+  describe("When invoked", () => {
+    test("Then it should render correctly a form with 2 inputs and 2 buttons", () => {
+      const loginForm = reactTestRenderer
+        .create(
+          <BrowserRouter>
+            <Provider store={store}>
+              <LoginForm />
+            </Provider>
+          </BrowserRouter>
+        )
+        .toJSON();
+
+      expect(loginForm).toMatchSnapshot();
     });
   });
 });
