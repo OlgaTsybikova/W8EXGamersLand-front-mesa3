@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppStyled from "./AppStyled";
 import GoalKeeper from "./components/GoalKeeper/GoalKeeper";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import GamesPage from "./pages/GamesPage/GamesPage";
 
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -31,6 +32,7 @@ function App() {
             </GoalKeeper>
           }
         />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </>
   );
