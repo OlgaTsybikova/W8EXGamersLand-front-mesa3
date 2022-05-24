@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const GamesPageStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .button-logOut {
     appearance: none;
     background-color: #000000;
