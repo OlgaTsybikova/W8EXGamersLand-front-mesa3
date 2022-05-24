@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { registerThunk } from "../../redux/thunks/userThunks";
 import RegisterFormStyled from "./RegisterFormStyled";
 
@@ -13,6 +13,7 @@ const RegisterForm = () => {
 
   const [formData, setFormData] = useState(initialForm);
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const updateData = (event) => {
@@ -24,6 +25,10 @@ const RegisterForm = () => {
 
     dispatch(registerThunk(formData));
     setFormData(initialForm);
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/games");
+    }
   };
 
   return (

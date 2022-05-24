@@ -5,6 +5,7 @@ import { logoutActionCreator } from "../../redux/features/userSlice";
 const GamesPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const logout = () => {
     dispatch(logoutActionCreator());
     localStorage.removeItem("token");
