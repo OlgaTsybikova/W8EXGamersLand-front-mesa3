@@ -1,10 +1,9 @@
-import LoginFormContainer from "./LoginFormStyled";
+import LoginFormStyled from "./LoginFormStyled";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "../../redux/thunks/userThunks";
 
 const LoginForm = () => {
-
   const initialForm = {
     username: "",
     password: "",
@@ -28,7 +27,7 @@ const LoginForm = () => {
   };
 
   return (
-    <LoginFormContainer className="login-page">
+    <LoginFormStyled className="login-page">
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="login-form__wrapper">
           <label className="login-form__label" htmlFor="username">
@@ -79,7 +78,7 @@ const LoginForm = () => {
           Sign Up
         </button>
       </div>
-    </LoginFormContainer>
+    </LoginFormStyled>
   );
 };
 

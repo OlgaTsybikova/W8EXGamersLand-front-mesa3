@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LoginFormContainer = styled.div`
+const LoginFormStyled = styled.div`
   background-color: white;
   border: 2px solid rgb(243, 244, 246);
   padding: 3rem 2.5rem;
@@ -50,4 +50,4 @@ const LoginFormContainer = styled.div`
   }
 `;
 
-export default LoginFormContainer;
+export default LoginFormStyled;
