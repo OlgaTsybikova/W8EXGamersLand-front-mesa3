@@ -16,7 +16,7 @@ exports[`Given a LoginForm component function When invoked Then it should render
         className="login-form__label"
         htmlFor="username"
       >
-        username
+        Username
       </label>
       <div
         className="input-wrapper"
@@ -39,7 +39,7 @@ exports[`Given a LoginForm component function When invoked Then it should render
         className="login-form__label"
         htmlFor="password"
       >
-        password
+        Password
       </label>
       <div>
         <input

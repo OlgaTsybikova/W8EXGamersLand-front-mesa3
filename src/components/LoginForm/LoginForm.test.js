@@ -33,7 +33,7 @@ describe("Given a LoginForm component", () => {
       );
 
       const textInputs = screen.getAllByRole("textbox", { type: "text" });
-      const passwordInputs = screen.getAllByLabelText("password");
+      const passwordInputs = screen.getAllByLabelText("Password");
       const buttons = screen.getAllByRole("button");
 
       expect(textInputs).toHaveLength(expectedTextInputs);
@@ -55,8 +55,8 @@ describe("Given a LoginForm component", () => {
         username: "marianlop",
         password: "password",
       };
-      const usernameField = screen.getByLabelText("username");
-      const passwordField = screen.getByLabelText("password");
+      const usernameField = screen.getByLabelText("Username");
+      const passwordField = screen.getByLabelText("Password");
       const button = screen.getByText("Log In");
 
       userEvent.type(passwordField, "password");
