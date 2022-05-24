@@ -6,6 +6,7 @@ import CardGame from "../../components/CardGame/CardGame";
 const GamesPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const logout = () => {
     dispatch(logoutActionCreator());
     localStorage.removeItem("token");
