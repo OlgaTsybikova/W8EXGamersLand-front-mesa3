@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import store from "../../redux/store/store";
 import { registerThunk } from "../../redux/thunks/userThunks";
 import RegisterForm from "./RegisterForm";
@@ -24,7 +25,9 @@ describe("Given the RegisterForm component", () => {
 
       render(
         <Provider store={store}>
-          <RegisterForm />
+          <BrowserRouter>
+            <RegisterForm />
+          </BrowserRouter>
         </Provider>
       );
 
@@ -42,7 +45,9 @@ describe("Given the RegisterForm component", () => {
     test("Then it should dispatch register Thunk", () => {
       render(
         <Provider store={{ ...store }}>
-          <RegisterForm />
+          <BrowserRouter>
+            <RegisterForm />
+          </BrowserRouter>
         </Provider>
       );
 

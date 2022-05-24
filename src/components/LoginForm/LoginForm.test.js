@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import store from "../../redux/store/store";
 import { loginThunk } from "../../redux/thunks/userThunks";
 import LoginForm from "./LoginForm";
@@ -21,11 +22,13 @@ describe("Given a LoginForm component", () => {
     test("Then it should render one textbox input, one password input and two buttons", () => {
       const expectedTextInputs = 1;
       const expectedPasswordInputs = 1;
-      const expectedButtons = 2;
+      const expectedButtons = 1;
 
       render(
         <Provider store={store}>
-          <LoginForm />
+          <BrowserRouter>
+            <LoginForm />
+          </BrowserRouter>
         </Provider>
       );
 
@@ -42,7 +45,9 @@ describe("Given a LoginForm component", () => {
     test("Then it should dispatch login Thunk", () => {
       render(
         <Provider store={{ ...store }}>
-          <LoginForm />
+          <BrowserRouter>
+            <LoginForm />
+          </BrowserRouter>
         </Provider>
       );
 
